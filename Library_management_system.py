@@ -167,7 +167,7 @@ class librarySystem(Library):    # inherit to the parent class
             time.sleep(3)
     
             for book in Books:
-                if book["Book_ID"] == book_id:           # Remove book info
+                if book["Book_ID"] == book_id:           # Remove specific book info
                     Books.remove(book)
                     print("Book deleted succesfully:)\n")
                     break
@@ -241,9 +241,9 @@ class librarySystem(Library):    # inherit to the parent class
             time.sleep(2)
     
             for i in Customer_info:         # loop show the customer info 
-                print("-------------------------------------------------------")
+                print("--------------------------------------------------------------------------------")
                 print(i)
-                print("-------------------------------------------------------\n")
+                print("--------------------------------------------------------------------------------\n")
     
         except Exception as e:
             print(f"Error occured: {e}.")
@@ -251,17 +251,23 @@ class librarySystem(Library):    # inherit to the parent class
 def main():               
     while True:
         try:
-            title1 = "== LIBRARY MANAGEMENT SYSTEM =="
-            print(title1.center(50))
+            title1 = "===================================="
+            print(title1.center(48))
 
-            title2 = "== Admin info ==\n"
+            title2 = "LIBRARY MANAGEMENT SYSTEM"
             print(title2.center(50))
 
-            date2 = time.strftime("%d-%m-%Y")                     # show today date
-            print(f"Today date = {date2}")
+            title3 = "====================================\n"
+            print(title3.center(50))
 
-            current_time = time.strftime("%H:%M:%S")           # show the current time
-            print(f"Current time = {current_time}\n")
+            title4 = "== Admin login ==\n"
+            print(title4.center(50))
+
+            date= time.strftime("%d-%m-%Y")                     # Today date
+            print(f"Today date: {date}")
+
+            current_time = time.strftime("%H:%M:%S")                      # display current time
+            print(f"Current time: {current_time}\n")
 
             print("1 - Admin login")
             print("2 - Exit\n")
@@ -311,7 +317,7 @@ def main():
                         c6.customer_info()
 
                     elif choice2 == 7:
-                        print("Thanks for using this program:)")
+                        print("Thanks for using this program:)\n")
                         break
         except Exception as e:
             print(f"Error occured: {e}.")
