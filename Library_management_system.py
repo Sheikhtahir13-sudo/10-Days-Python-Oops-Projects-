@@ -24,7 +24,7 @@ Books = [                        # 5 Books data already store in list
         "Quantity": 13
     },
     {
-        "Book_ID": 101,
+        "Book_ID": 103,
         "Title": "Python Programming",
         "Author": "John Zelle",
         "Category": "Programming",
@@ -32,7 +32,7 @@ Books = [                        # 5 Books data already store in list
         "Quantity": 15
     },
     {
-        "Book_ID": 102,
+        "Book_ID": 104,
         "Title": "Data Structures",
         "Author": "Mark Allen Weiss",
         "Category": "Computer Science",
@@ -40,7 +40,7 @@ Books = [                        # 5 Books data already store in list
         "Quantity": 8
     },
     {
-        "Book_ID": 103,
+        "Book_ID": 105,
         "Title": "Machine Learning Basics",
         "Author": "Aurélien Géron",
         "Category": "Artificial Intelligence",
@@ -108,37 +108,52 @@ class Admin():
 
 class librarySystem(Library):    # inherit to the parent class
 
-    def Add_Books(self):                              # New books function
-            while True:
-                try:
-                    title3 = "== ADD Books =="
-                    print(title3.center(50))
+    def Add_Books(self):
+        while True:
+            try:
+                title3 = "== ADD Books =="
+                print(title3.center(50))
     
-                    
-                    new_book = {
-                        "Book_ID": int(input("\nEnter Book_id: ")),             # Take input to store in the list
-                        "Title": input("Enter Title:"),
-                        "Auther": input("Enter Auther: "),
-                        "Category": input("Enter Category: "),
-                        "Price": int(input("Enter Price: ")),
-                        "Quantity": int(input("Enter Quantity:"))
-                    }
+                book_id = int(input("\nEnter Book_id: "))
     
-                    print("\n1 - Add more books")      # Add more books permission
-                    print("2 - Just add\n")
+                                                       # Duplicate Book_ID Check
+                duplicate = False
     
-                    choice3 = int(input("Enter choice(1-2): "))
-    
-                    print("\n Loading... \n")
-                    time.sleep(3)
-    
-                    if choice3 == 2:
-                        Books.append(new_book)                # Append in the list
-                        print("Book added succesfully:)")
+                for book in Books:
+                    if book["Book_ID"] == book_id:
+                        duplicate = True
+                        print("Book ID already exists! Please enter another ID.\n")
                         break
     
-                except Exception as e:
-                    print(f"Error occured: {e}.")
+                if duplicate:
+                    continue
+    
+                new_book = {
+                    "Book_ID": book_id,
+                    "Title": input("Enter Title: "),
+                    "Author": input("Enter Author: "),
+                    "Category": input("Enter Category: "),
+                    "Price": int(input("Enter Price: ")),
+                    "Quantity": int(input("Enter Quantity: "))
+                }
+    
+                Books.append(new_book)
+    
+                print("\nLoading...\n")
+                time.sleep(2)
+    
+                print("Book added successfully :)\n")
+    
+                print("1 - Add more books")
+                print("2 - Exit\n")
+    
+                choice3 = int(input("Enter choice (1-2): "))
+    
+                if choice3 == 2:
+                    break
+    
+            except Exception as e:
+                print(f"Error occurred: {e}.")
 
     def display_books(self):  # Display all books that store in books list
         try:
