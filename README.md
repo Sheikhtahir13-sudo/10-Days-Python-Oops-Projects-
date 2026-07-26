@@ -12,6 +12,9 @@ A console-based application to manage books, customers, borrowing, and returning
 ### 🏦 2. Bank Management System
 A console-based banking system that allows users to create accounts, deposit, withdraw, transfer funds, and view account details using OOP concepts.
 
+### 🏧 3. ATM System
+A console-based ATM simulation that allows users to log in securely, check balances, deposit and withdraw money, transfer funds, and perform basic banking operations using OOP concepts.
+
 ## 🛠️ OOP Concepts Used
 
 - ✅ Classes & Objects
