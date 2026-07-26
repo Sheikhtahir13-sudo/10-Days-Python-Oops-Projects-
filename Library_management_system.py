@@ -334,6 +334,11 @@ def main():
                     elif choice2 == 7:
                         print("Thanks for using this program:)\n")
                         break
+
+            elif choice1 == 2:
+                print("\nThanks for using this program:)")
+                break
+
         except Exception as e:
             print(f"Error occured: {e}.")
             break
