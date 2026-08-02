@@ -1,0 +1,14 @@
+BUILD BY MUHAMMAD TAHIR
+========================================
+         ATM MANAGEMENT SYSTEM
+========================================
+
+1. ATM system
+
+    * New account
+    * Deposit money 
+    * Withdraw money
+    * Show Balnance
+    * Exit
+
+2. Exit
