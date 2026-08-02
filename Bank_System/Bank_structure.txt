@@ -1,0 +1,36 @@
+BUILD BY MUHAMMAD TAHIR
+=====================================
+        BANK MANAGEMENT SYSTEM
+=====================================
+
+1. Admin login
+
+    =============================
+             INVENTORY
+    =============================
+ 
+        1. ==========================
+                 BANK SYSTEM
+           ==========================
+    
+           * New customer
+           * Open account
+           * Customers details
+           * Account details
+           * Delete customer
+           * Delete account
+           * Exit
+
+        2. ==========================
+                CUSTOMER SYSTEM
+           ==========================
+    
+           * Withdraw money
+           * Deposit money
+           * Transfer money
+           * Show balance
+           * Exit
+
+        3. Exit
+
+2. Logout
