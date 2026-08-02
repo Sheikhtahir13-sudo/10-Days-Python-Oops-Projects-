@@ -1,0 +1,20 @@
+BUILD BY MUHAMMAD TAHIR
+=======================================
+       LIBRARY MANAGEMENT SYSTEM
+=======================================
+
+1. Admin login
+    
+    =========================
+           MAIN MENU
+    =========================
+
+    * New books
+    * Display books
+    * Delete books
+    * Purchase books
+    * Total amount
+    * Customer info
+    * Exit
+
+2. Logout
